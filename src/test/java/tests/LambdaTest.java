@@ -8,7 +8,6 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-@SuppressWarnings("ALL")
 public class LambdaTest {
 
     void searchIssue(String repo, String pagename, String searchfor) {

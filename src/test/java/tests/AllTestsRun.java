@@ -13,7 +13,7 @@ public class AllTestsRun {
 
     private final static String REPO = "allure-framework/allure2";
     private final static String PAGE_NAME = "Issues";
-    private final static String SEARCH_FOR = "#1195";
+    private final static String SEARCH_FOR = "#1198";
 
     @Test
     @DisplayName("StepTest")
