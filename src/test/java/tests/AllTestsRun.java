@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Test;
 @DisplayName("Запуск всех тестов сразу")
 public class AllTestsRun {
 
-    private StepTest steps = new StepTest();
-    private LambdaTest lambda = new LambdaTest();
-    private SelenideTest selenide = new SelenideTest();
+    private final StepTest steps = new StepTest();
+    private final LambdaTest lambda = new LambdaTest();
+    private final SelenideTest selenide = new SelenideTest();
 
     private final static String REPO = "allure-framework/allure2";
     private final static String PAGE_NAME = "Issues";
