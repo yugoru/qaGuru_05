@@ -1,6 +1,7 @@
 package tests;
 
 
+import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
@@ -11,31 +12,31 @@ import static com.codeborne.selenide.Selenide.open;
 public class StepTest {
 
 
-    @Step
+    @Step("Открываем главную страницу")
     public void openMainPage() {
         open("https://github.com");
     }
 
-    @Step
+    @Step("Ищем нужный репозиторий в поле для ввода")
     public void searchRepo(String repo) {
         $(".header-search-input").setValue(repo).pressEnter();
 
     }
 
-    @Step
+    @Step("Переходим в репозиторий")
     public void clickRepo(String repo) {
         $(By.linkText(repo)).click();
     }
 
-    @Step
+    @Step("Переходим на указанную страницу")
     public void goToPage(String pageName) {
         $(withText(pageName)).click();
 
     }
 
-    @Step
+    @Step("Открываем главную страницу")
     public void searchFor(String searchFor) {
-        $(withText(searchFor)).click();
+        $(withText(searchFor)).shouldBe(Condition.visible);
 
     }
 

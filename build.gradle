@@ -18,6 +18,7 @@ dependencies {
             "org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
     implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.5'
 }
 
 allure {

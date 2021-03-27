@@ -1,22 +1,21 @@
 package tests;
 
 
-import org.junit.jupiter.api.Test;
+import com.codeborne.selenide.Condition;
+import io.qameta.allure.Owner;
+import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SelenideTest {
 
-    @Test
-    void searchIssue() {
+    void searchIssue(String repo, String pagename, String searchfor) {
         open("https://github.com");
-        $(".header-search-input").setValue("allure").pressEnter();
-        $("a[href='/allure-framework/allure2']").click();
-        $("a[href='/allure-framework/allure2/issues']").click();
-        $("a[href='/allure-framework/allure2/issues/1195']").shouldHave(text("Add English (ISO-8601) locale"));
+        $(".header-search-input").setValue(repo).pressEnter();
+        $(By.linkText(repo)).click();
+        $(withText(pagename)).click();
+        $(withText(searchfor)).shouldBe(Condition.visible);
     }
-
-
 }
