@@ -1,6 +1,6 @@
 package tests;
 
-import Steps.GithubSteps;
+import steps.GithubSteps;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

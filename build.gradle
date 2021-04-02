@@ -17,7 +17,7 @@ dependencies {
             "com.codeborne:selenide:$selenideVersion",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion",
             "com.github.javafaker:javafaker:1.0.2",
-            group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.5')
+            "org.aspectj:aspectjweaver:1.9.5")
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 
 }
