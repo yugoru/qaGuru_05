@@ -11,7 +11,6 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class GithubSteps {
 
-
     @Step("Открываем главную страницу")
     public void openMainPage() {
         open("https://github.com");
@@ -20,7 +19,6 @@ public class GithubSteps {
     @Step("Ищем нужный репозиторий в поле для ввода")
     public void searchRepo(String repo) {
         $(".header-search-input").setValue(repo).pressEnter();
-
     }
 
     @Step("Переходим в репозиторий")
@@ -31,13 +29,11 @@ public class GithubSteps {
     @Step("Переходим на указанную страницу")
     public void goToPage(String pageName) {
         $(withText(pageName)).click();
-
     }
 
     @Step("Проверяем, что на странице есть указанный текст")
     public void searchFor(String searchFor) {
         $(withText(searchFor)).shouldBe(Condition.visible);
-
     }
 
 }
