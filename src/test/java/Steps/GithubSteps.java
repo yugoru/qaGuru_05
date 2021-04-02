@@ -1,4 +1,4 @@
-package tests;
+package Steps;
 
 
 import com.codeborne.selenide.Condition;
@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class StepTest {
+public class GithubSteps {
 
 
     @Step("Открываем главную страницу")
@@ -34,7 +34,7 @@ public class StepTest {
 
     }
 
-    @Step("Открываем главную страницу")
+    @Step("Проверяем, что на странице есть указанный текст")
     public void searchFor(String searchFor) {
         $(withText(searchFor)).shouldBe(Condition.visible);
 

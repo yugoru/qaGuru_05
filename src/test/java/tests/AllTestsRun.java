@@ -1,5 +1,6 @@
 package tests;
 
+import Steps.GithubSteps;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -7,7 +8,7 @@ import org.junit.jupiter.api.Test;
 @DisplayName("Запуск всех тестов сразу")
 public class AllTestsRun {
 
-    private final StepTest steps = new StepTest();
+    private final GithubSteps steps = new GithubSteps();
     private final LambdaTest lambda = new LambdaTest();
     private final SelenideTest selenide = new SelenideTest();
 
